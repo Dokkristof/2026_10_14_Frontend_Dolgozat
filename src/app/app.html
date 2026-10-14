@@ -1,0 +1,35 @@
+<!--
+File: app.html
+Author: Doktor Kristóf Márk
+Copyright: 2026, Doktor Kristóf Márk
+Group: Szoft II/N
+Date: 2026-10-14
+Github: https://github.com/Dokkristof
+Licenc: MIT
+-->
+
+
+<div class="container mt-3 text-center">
+  <h1 class="h4">ROMBUSZ TERÜLET SZÁMÍTÓ</h1>
+</div>
+
+<nav class="navbar navbar-expand navbar-dark navbar-green">
+  <div class="container">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" routerLinkActive="active"
+           [routerLinkActiveOptions]="{ exact: true }">Főoldal</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/calculator" routerLinkActive="active">Számoló</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about" routerLinkActive="active">Névjegy</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <router-outlet />
+</div>

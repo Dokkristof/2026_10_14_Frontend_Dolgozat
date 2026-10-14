@@ -1,0 +1,19 @@
+.calculator-form {
+  max-width: 400px;
+}
+
+.form-label {
+  color: #212529;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.form-control {
+  border: 2px solid #6c757d;
+  background-color: #fff;
+}
+
+.form-control:focus {
+  border-color: #198754;
+  box-shadow: 0 0 0 0.2rem rgb(25 135 84 / 25%);
+}

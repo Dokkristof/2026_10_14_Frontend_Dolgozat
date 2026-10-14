@@ -1,0 +1,41 @@
+<!--
+File: calculator.html
+Author: Doktor Kristóf Márk
+Copyright: 2026, Doktor Kristóf Márk
+Group: Szoft II/N
+Date: 2026-10-14
+Github: https://github.com/Dokkristof
+Licenc: MIT
+-->
+
+<h2>Rombusz területének kiszámítása</h2>
+
+<form #calculatorForm="ngForm" (ngSubmit)="calculate()" novalidate class="calculator-form">
+  <div class="mb-3">
+    <label for="e_diagonal" class="form-label">E átló</label>
+    <input
+      id="e_diagonal" name="e_diagonal" class="form-control"
+      [(ngModel)]="eDiagonal" required min="0.01" #eField="ngModel"
+      [class.is-invalid]="eField.invalid && (eField.touched || calculatorForm.submitted)"
+    />
+    <div class="invalid-feedback">Hiba! Adjon meg egy pozitív számot!</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="f_diagonal" class="form-label">F átló</label>
+    <input
+      id="f_diagonal" name="f_diagonal" class="form-control"
+      [(ngModel)]="fDiagonal" required min="0.01" #fField="ngModel"
+      [class.is-invalid]="fField.invalid && (fField.touched || calculatorForm.submitted)"
+    />
+    <div class="invalid-feedback">Hiba! Adjon meg egy pozitív számot!</div>
+  </div>
+
+  <button type="submit" class="btn btn-success">Terület kiszámítása</button>
+</form>
+
+@if (area !== null) {
+  <div class="alert alert-info mt-3">
+    Rombusz területe: <strong>{{ area }}</strong>
+  </div>
+}

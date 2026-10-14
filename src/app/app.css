@@ -1,0 +1,11 @@
+.navbar-green {
+  background-color: #198754;
+}
+
+.navbar-green .container {
+  justify-content: center;
+}
+
+.navbar-green .nav-link {
+  font-weight: 700;
+}
